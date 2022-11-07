@@ -1,6 +1,6 @@
 # Permissions generator
 
-#### This is a html ui to generate the decimal/binary values similar to unix permissions  that you could use for granularity of application permissions
+#### This is a html ui to generate the decimal/binary values that you could use for granularity of application permissions
 ![](example.PNG)
 
 
