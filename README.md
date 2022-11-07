@@ -23,12 +23,12 @@ To add more modules (permissions) just put following divs in the next empty grou
 ```
 
 ```python
-    Permission.CREATE in [x for x in compute_permissions(decimal_value=33345) if x.__class__ == Module1]
+    Permission.CREATE in [x for x in compute_permissions(decimal_value=33345) if type(x) == Module1]
     True
 ```
 
 ```python
-    Permission.CREATE in [x for x in compute_permissions(decimal_value=33345) if x.__class__ == Module2]
+    Permission.CREATE in [x for x in compute_permissions(decimal_value=33345) if type(x) == Module2]
     False
 ```
 
