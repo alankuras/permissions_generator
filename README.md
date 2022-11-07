@@ -1,6 +1,8 @@
 # Permissions generator
 
-### This is a html 
+#### This is a html ui to generate the decimal/binary values similar to unix permissions  that you could use for granularity of application permissions
+![](example.PNG)
+
 
 To add more modules (permissions) just put following divs in the next empty group (div5, div6 and so on)
 
@@ -16,7 +18,7 @@ To add more modules (permissions) just put following divs in the next empty grou
 
 # Python
 
-### Usage
+### Example usage of permissions written in decimal 
 
 ```python
     compute_permissions(decimal_value=33345)
