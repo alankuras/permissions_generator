@@ -96,11 +96,11 @@ def compute_permissions(decimal_value: int):
 if __name__ == '__main__':
     print(compute_permissions(decimal_value=33345))
     print(
-        Permission.CREATE in [x for x in compute_permissions(decimal_value=33345) if type(x) == Incident]
+        Permission.CREATE in [x for x in compute_permissions(decimal_value=33345) if type(x) == Group1]
 
     )
 
     print(
-        Permission.CREATE in [x for x in compute_permissions(decimal_value=33345) if type(x) == Request]
+        Permission.CREATE in [x for x in compute_permissions(decimal_value=33345) if type(x) == Group2]
     )
 
