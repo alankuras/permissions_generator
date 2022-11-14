@@ -44,39 +44,39 @@ class Module(ModuleABC):
         return self._permission
 
 
-class Module1(Module):
+class Group1(Module):
     pass
 
 
-class Module2(Module):
+class Group2(Module):
     pass
 
 
-class Module3(Module):
+class Group3(Module):
     pass
 
 
-class Module4(Module):
+class Group4(Module):
     pass
 
 
 permission_list = [
-    Module1(permission=Permission.CREATE, decimal=pow(2, 0)),
-    Module1(permission=Permission.READ, decimal=pow(2, 1)),
-    Module1(permission=Permission.UPDATE, decimal=pow(2, 2)),
-    Module1(permission=Permission.DELETE, decimal=pow(2, 3)),
-    Module2(permission=Permission.CREATE, decimal=pow(2, 4)),
-    Module2(permission=Permission.READ, decimal=pow(2, 5)),
-    Module2(permission=Permission.UPDATE, decimal=pow(2, 6)),
-    Module2(permission=Permission.DELETE, decimal=pow(2, 7)),
-    Module3(permission=Permission.CREATE, decimal=pow(2, 8)),
-    Module3(permission=Permission.READ, decimal=pow(2, 9)),
-    Module3(permission=Permission.UPDATE, decimal=pow(2, 10)),
-    Module3(permission=Permission.DELETE, decimal=pow(2, 11)),
-    Module4(permission=Permission.CREATE, decimal=pow(2, 12)),
-    Module4(permission=Permission.READ, decimal=pow(2, 13)),
-    Module4(permission=Permission.UPDATE, decimal=pow(2, 14)),
-    Module4(permission=Permission.DELETE, decimal=pow(2, 15)),
+    Group1(permission=Permission.CREATE, decimal=pow(2, 0)),
+    Group1(permission=Permission.READ, decimal=pow(2, 1)),
+    Group1(permission=Permission.UPDATE, decimal=pow(2, 2)),
+    Group1(permission=Permission.DELETE, decimal=pow(2, 3)),
+    Group2(permission=Permission.CREATE, decimal=pow(2, 4)),
+    Group2(permission=Permission.READ, decimal=pow(2, 5)),
+    Group2(permission=Permission.UPDATE, decimal=pow(2, 6)),
+    Group2(permission=Permission.DELETE, decimal=pow(2, 7)),
+    Group3(permission=Permission.CREATE, decimal=pow(2, 8)),
+    Group3(permission=Permission.READ, decimal=pow(2, 9)),
+    Group3(permission=Permission.UPDATE, decimal=pow(2, 10)),
+    Group3(permission=Permission.DELETE, decimal=pow(2, 11)),
+    Group4(permission=Permission.CREATE, decimal=pow(2, 12)),
+    Group4(permission=Permission.READ, decimal=pow(2, 13)),
+    Group4(permission=Permission.UPDATE, decimal=pow(2, 14)),
+    Group4(permission=Permission.DELETE, decimal=pow(2, 15)),
 ]
 
 
@@ -96,11 +96,11 @@ def compute_permissions(decimal_value: int):
 if __name__ == '__main__':
     print(compute_permissions(decimal_value=33345))
     print(
-        Permission.CREATE in [x for x in compute_permissions(decimal_value=33345) if type(x) == Module1]
+        Permission.CREATE in [x for x in compute_permissions(decimal_value=33345) if type(x) == Incident]
 
     )
 
     print(
-        Permission.CREATE in [x for x in compute_permissions(decimal_value=33345) if type(x) == Module2]
+        Permission.CREATE in [x for x in compute_permissions(decimal_value=33345) if type(x) == Request]
     )
 
